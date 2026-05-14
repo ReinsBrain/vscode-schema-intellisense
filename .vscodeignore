@@ -1,0 +1,19 @@
+## Source and tests
+src/**
+test/**
+
+## Dev/editor config
+.vscode/**
+tsconfig.json
+vscode-schema-intellisense.md
+
+## Example workspace files not needed at runtime
+example/**
+
+## Dependency/install metadata not required in VSIX
+package-lock.json
+
+## Misc repo files
+.git/**
+.gitignore
+node_modules/**/.bin/**

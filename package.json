@@ -4,7 +4,7 @@
 	"description": "JSON-Schema-driven IntelliSense for template variables",
 	"main": "./dist/extension.js",
 	"displayName": "Schema IntelliSense for Templates",
-	"publisher": "reinsbrain",
+	"publisher": "ReinsBrain",
 	"scripts": {
 		"test": "npm run test:unit",
 		"test:unit": "node --test test/unit/**/*.test.ts",
@@ -82,7 +82,7 @@
 	},
 	"devDependencies": {
 		"@types/node": "^25.7.0",
-		"@types/vscode": "^1.118.0",
+		"@types/vscode": "^1.95.0",
 		"typescript": "^6.0.3"
 	},
 	"dependencies": {
