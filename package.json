@@ -9,6 +9,7 @@
 		"test": "npm run test:unit",
 		"test:unit": "node --test test/unit/**/*.test.ts",
 		"build": "tsc -p .",
+		"package:vsix": "npx @vscode/vsce package",
 		"watch": "tsc -w -p .",
 		"lint": "tsc -p . --noEmit",
 		"vscode:prepublish": "npm run build"
