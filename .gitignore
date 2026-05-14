@@ -1,0 +1,23 @@
+## Build output
+dist/
+
+## Dependencies
+node_modules/
+
+## Packaged extension artifacts
+*.vsix
+
+## Extension test/runtime artifacts
+.vscode-test/
+coverage/
+
+## Environment files
+.env
+.env.*
+
+## Logs
+*.log
+
+## OS/editor noise
+.DS_Store
+Thumbs.db

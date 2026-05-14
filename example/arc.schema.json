@@ -1,0 +1,35 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"type": "object",
+	"properties": {
+		"meta": {
+			"$ref": "#/$defs/meta"
+		},
+		"status_loading": {
+			"type": "string",
+			"description": "Loading state text shown while content is being prepared.",
+			"enum": ["idle", "loading", "complete"]
+		},
+		"brand": {
+			"$ref": "./brand.schema.json"
+		}
+	},
+	"required": ["meta"],
+	"$defs": {
+		"meta": {
+			"type": "object",
+			"description": "Page metadata available to the template.",
+			"properties": {
+				"theme_color": {
+					"type": "string",
+					"description": "Hex color used for the page theme."
+				},
+				"title": {
+					"type": "string",
+					"description": "Page title rendered in the head."
+				}
+			},
+			"required": ["theme_color"]
+		}
+	}
+}

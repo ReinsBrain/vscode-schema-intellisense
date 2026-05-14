@@ -1,0 +1,6 @@
+<!-- @schema ./arc.schema.json @root $ -->
+<section style="color: <%= $.meta.theme_color %>">
+	<h1><%= $.meta.title %></h1>
+	<p><%= $.status_loading %></p>
+	<img src="<%= $.brand.logo_url %>" alt="Logo">
+</section>

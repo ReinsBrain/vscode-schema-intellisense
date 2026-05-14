@@ -1,0 +1,11 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"type": "object",
+	"description": "Brand-specific fields.",
+	"properties": {
+		"logo_url": {
+			"type": "string",
+			"description": "Public URL for the brand logo image."
+		}
+	}
+}
