@@ -3,7 +3,7 @@ name: Release VSIX
 on:
   release:
     types:
-      - [published]
+      - published
 
 permissions:
   contents: write
