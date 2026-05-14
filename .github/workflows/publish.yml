@@ -1,9 +1,9 @@
 name: Release VSIX
 
 on:
-  push:
-    tags:
-      - 'v*'
+  release:
+    types:
+      - [published]
 
 permissions:
   contents: write
@@ -15,6 +15,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.release.tag_name }}
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -35,7 +37,7 @@ jobs:
         run: npm run package:vsix
 
       - name: Upload VSIX to GitHub Release
-        uses: softprops/action-gh-release@v2
-        with:
-          files: '*.vsix'
-          generate_release_notes: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+        run: gh release upload "$RELEASE_TAG" *.vsix --clobber
